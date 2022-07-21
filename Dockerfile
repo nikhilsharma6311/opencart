@@ -10,4 +10,4 @@ RUN chmod 777 /var/www/html/ -R
 
 HEALTHCHECK --interval=30s --timeout=1s --start-period=5s --retries=3 CMD [ "curl", "-I", "http://localhost/robots.txt" ]
 
-ENTRYPOINT ["chmod", "-R", "777", "/var/www/html"]
+CMD ["chmod", "-R", "777", "/var/www/html"]
